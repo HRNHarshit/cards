@@ -1,0 +1,60 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.header {
+  display: inline;
+  width: 100%;
+}
+
+.header span {
+  background: #fff;
+  width: 100%;
+}
+
+.edit_info {
+  position: relative;
+  width: 500px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit_info input {
+  position: relative;
+  padding: 5px 10px;
+  width: 60%;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.edit_info input:hover {
+  border: 1px solid #32a5ed;
+}
+
+.edit_info input:focus {
+  box-shadow: 0 0 3pt 1pt #73c9ff;
+  outline-width: 0px;
+}
+
+.edit_info input,
+.edit_info button {
+  overflow: visible;
+}
+
+.btn {
+}
