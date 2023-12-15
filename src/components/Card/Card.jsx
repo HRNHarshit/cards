@@ -8,7 +8,8 @@ import { FaEnvelope, FaPhone, FaGlobe, FaHeart, FaRegHeart, FaPenSquare, FaTrash
 import Modal from "../Modal/Modal";
 
 const Card = (props, key) => {
-  const [like, setLike] = useState(false);
+  const [like, setLike] = useState(true);
+  const [showModal, setShowModel] = useState(false);
 
   return (
     <div className="card">
@@ -45,8 +46,9 @@ const Card = (props, key) => {
             </button>
           </div>
           <div className="footer_div btn_edit">
-            <button className="btn" onClick={<Modal {...props} key={key} />}>
+            <button className="btn" onClick={() => setShowModel(!showModal)}>
               <FaPenSquare size="19" color="6f6f6f" />
+              {showModal && <Modal />}
             </button>
           </div>
           <div className="footer_div btn_delete">

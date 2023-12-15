@@ -1,14 +1,18 @@
-.modal {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.modal_wrapper {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal {
+  border: 2px solid black;
+  display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.65);
+  z-index: 5;
 }
 
 .header {
@@ -21,7 +25,7 @@
   width: 100%;
 }
 
-.edit_info {
+.edit-info {
   position: relative;
   width: 500px;
   background: #fff;
@@ -33,7 +37,7 @@
   gap: 15px;
 }
 
-.edit_info input {
+.edit-info input {
   position: relative;
   padding: 5px 10px;
   width: 60%;
@@ -42,19 +46,42 @@
   transition: all 0.3s;
 }
 
-.edit_info input:hover {
+.edit-info input:hover {
   border: 1px solid #32a5ed;
 }
 
-.edit_info input:focus {
+.edit-info input:focus {
   box-shadow: 0 0 3pt 1pt #73c9ff;
   outline-width: 0px;
 }
 
-.edit_info input,
-.edit_info button {
+.edit-info input,
+.edit-info button {
   overflow: visible;
 }
 
 .btn {
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+.btn-cancel {
+  border: 1px solid grey;
+  color: grey;
+}
+
+.btn-cancel:hover {
+  border: 1px solid #1890ff;
+  color: #1890ff;
+}
+
+.btn-submit {
+  background: #1890ff;
+  border: 1px solid #1890ff;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  opacity: 0.8;
 }
