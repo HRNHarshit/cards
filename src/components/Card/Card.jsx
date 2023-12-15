@@ -6,10 +6,17 @@ import "./Card.css";
 import { FaEnvelope, FaPhone, FaGlobe, FaHeart, FaRegHeart, FaPenSquare, FaTrash } from "react-icons/fa";
 // Components
 import Modal from "../Modal/Modal";
+// Data
+import data from "../../data.json";
 
 const Card = (props, key) => {
   const [like, setLike] = useState(true);
   const [showModal, setShowModel] = useState(false);
+  const [person, setPerson] = useState(data);
+
+  const onHandle = (key) => {
+    setPerson(person.filter((per) => per.id !== key));
+  };
 
   return (
     <div className="card">
@@ -52,7 +59,7 @@ const Card = (props, key) => {
             </button>
           </div>
           <div className="footer_div btn_delete">
-            <button className="btn">
+            <button className="btn" onClick={() => onHandle(key)}>
               <FaTrash size="19" color="6f6f6f" />
             </button>
           </div>

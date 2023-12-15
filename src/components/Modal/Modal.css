@@ -10,9 +10,9 @@
 .modal {
   border: 2px solid black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 5;
 }
 
 .header {
@@ -53,11 +53,6 @@
 .edit-info input:focus {
   box-shadow: 0 0 3pt 1pt #73c9ff;
   outline-width: 0px;
-}
-
-.edit-info input,
-.edit-info button {
-  overflow: visible;
 }
 
 .btn {

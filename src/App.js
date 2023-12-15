@@ -11,8 +11,8 @@ import data from "./data.json";
 function App() {
   return (
     <div className="App">
-      {data.map((ele, index) => (
-        <Card {...ele} key={index} />
+      {data.map((ele) => (
+        <Card {...ele} key={ele.id} />
       ))}
     </div>
   );
